@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=dev nodemon src/index.ts",
-    "start": "nodemon src/index.ts",
-    "build": "tsc --build",
     "test": "NODE_ENV=test jest --runInBand",
+    "start": "yarn build && nodemon dist",
+    "build": "tsc --build",
     "test:unit": "NODE_ENV=test jest unit --verbose",
     "test:path": "NODE_ENV=test jest --runInBand --verbose",
     "test:coverage": "NODE_ENV=test jest --runInBand --coverage",
