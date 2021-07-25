@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "tsc --build tsconfig.build.json",
+    "start": "nodemon src/index.ts",
     "test": "NODE_ENV=test jest --runInBand",
     "test:unit": "NODE_ENV=test jest unit --verbose",
     "test:path": "NODE_ENV=test jest --runInBand --verbose",
