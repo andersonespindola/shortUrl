@@ -1,0 +1,33 @@
+module.exports = {
+  presets: [
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    '@babel/preset-typescript'
+  ],
+  plugins: [
+    '@babel/plugin-transform-runtime',
+    'babel-plugin-transform-typescript-metadata',
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+    [
+      'module-resolver',
+      {
+        root: ['.'],
+        alias: {
+          '~': './src/'
+        }
+      }
+    ]
+  ],
+  env: {
+    build: {
+      ignore: [
+        '**/*.test.tsx',
+        '**/*.spec.tsx',
+        '**/*.test.ts',
+        '**/*.spec.ts',
+        '__tests__'
+      ]
+    }
+  },
+  ignore: ['node_modules']
+}
