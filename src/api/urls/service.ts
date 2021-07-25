@@ -15,7 +15,7 @@ export const getUrl = async (shortUrl: string) => {
     console.log(
       'Não foi encontrado a url no banco será redirecionado para a tela principal'
     )
-    return 'http://localhost:3000'
+    return 'https://minis.vercel.app/'
   }
 
   console.log(
